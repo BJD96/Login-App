@@ -1,0 +1,40 @@
+
+  
+<div class="wrapper">
+ 
+  <div class="logo"> <h1><i [class.fa-lock]="loading==false" [class.fa-spinner]="loading==true" class="fas"></i>
+
+
+</h1> </div>
+  <form [formGroup]="rForm" (ngSubmit)=" rForm.valid && login()" #f="ngForm">
+
+    <div class="inputUser">
+
+      <div class="user">
+        <i class="fas fa-user"></i>
+      </div>
+
+          <label class="userlabel" for="username"></label>
+          <input formControlName="userName" type="text" class="form-control" name="username" placeholder="UserName" autocomplete="off"  [(ngModel)]="model.username"/>
+         
+        </div>
+        <div *ngIf="!rForm.controls['userName'].valid && f.submitted" class="alert" >Username is required</div>
+
+        <div  class="inputPassword">
+
+            <div (click)="showPassword()" class="password">
+                <i [class.fa-eye-slash]="show==false" [class.fa-eye]="show==true"  class="far"></i>
+              </div>
+          <label for="password"></label>
+          <input formControlName="password"  type="{{type}}" class="form-control" name="password" placeholder="Password" [(ngModel)]="model.password"/>
+        </div>
+        <div *ngIf="!rForm.controls['password'].valid && f.submitted"  class="alert">Password is required</div>
+
+
+          <button >Login</button>
+          
+
+  </form>
+</div>
+
+

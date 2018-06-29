@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#2f2142, #242849);
+    
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+}
+
+
+button {
+    width: 100%;
+    color: white;
+    background: #d51134;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    margin-top:25px;
+    padding: 10px;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    animation: pop 0.5s 2.1s forwards;
+    overflow: hidden;
+    transition: all .5s ease;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: 110%;
+        width: 30px;
+        height: 200%;
+        background: #ffffff59;
+        transform: rotate(20deg);
+      }
+      
+      &:hover {
+        background: hsl(349, 67%, 51%);
+    
+        &:before {
+          right: -50%;
+          transition: 1s ease all;
+        }
+      }
+  }
+

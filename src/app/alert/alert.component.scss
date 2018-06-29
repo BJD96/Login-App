@@ -1,0 +1,26 @@
+.alert{
+    background: #d51134;
+    color: white;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    animation: alertpop 0.5s forwards;
+
+
+    h1{
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+
+@keyframes alertpop {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }

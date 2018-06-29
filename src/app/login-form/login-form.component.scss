@@ -1,0 +1,180 @@
+
+
+.wrapper {
+  width: 220px;
+  text-align: center;
+  color: #ffffff; 
+transform: translateY(-62px);
+
+
+form{
+  display: block;
+}
+
+
+  h1 {
+    font-size: 50px;
+  }
+  input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin: 15px 0; 
+    border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+transition: all 0.5s;
+
+&:focus{
+
+background: #ccc;
+
+
+}
+
+  }
+
+ 
+
+.inputUser{
+    opacity: 0;
+    display: flex;
+    animation: pop .5s 1.5s forwards;
+
+    .user{
+
+        width: 45px;
+        background: #d51134;
+        margin: 15px 0;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+
+        i{
+            font-size: 20px;
+            transform: translateY(6px);
+            
+        }
+    }
+
+}
+
+.inputPassword{
+    opacity: 0;
+    animation: pop .5s 1.8s forwards;
+    display: flex;
+
+
+    .password{
+
+        width: 45px;
+        background: #d51134;
+        margin: 15px 0;
+        border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+cursor: pointer;
+    
+
+        i{
+            font-size: 20px;
+            transform: translateY(6px);
+            
+        }
+    }
+
+}
+
+  button{
+    opacity: 0;
+  }
+}
+
+.alert {
+  color: #d51134;
+  font-weight: 300;
+  transform: translateY(20px);
+  position: absolute;
+  font-size: 15px;
+  left: 45px;
+
+
+  
+}
+
+.logo {
+  font-size: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+  animation: logo_in 1s 1s forwards;
+  transform: scale(0);
+  h1 {
+    background: #d51134;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .fa-lock {
+    transform: translateY(15px);
+  }
+
+  .fa-spinner{
+
+    animation: load 1s ;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+  }
+}
+
+label{
+    display: flex;
+}
+
+
+
+
+@keyframes logo_in {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(0.98);
+  }
+  60% {
+    transform: scale(1.012);
+  }
+  80% {
+    transform: scale(0.995);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(50%);
+  }
+}
+
+@keyframes load {
+  
+0%{
+  transform: rotate(0);
+
+
+}
+
+  100% {
+    transform: rotate(1turn);
+    
+
+  }
+}
